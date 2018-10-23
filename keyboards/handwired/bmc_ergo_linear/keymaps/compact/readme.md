@@ -1,0 +1,1 @@
+# The compact keymap for bmc_ergo_linear
