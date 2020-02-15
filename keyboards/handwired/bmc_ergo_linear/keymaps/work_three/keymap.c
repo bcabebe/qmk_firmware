@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |------+------+   x  +------+   v  |   b  |              |   n  |   m  +------+   .  +------+------|
 //  | Shift|   z  +------'      `-------------'              `-------------'      `------+   /  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |  F2  |  Spc |  Spc ||  Spc |  Spc |Ctl-F2|                            
+//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |                            
 //                              `--------------------'`--------------------'
 //
 //                       ,------.                                          ,------.
@@ -61,54 +61,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |------+------+   X  +------+   V  |   B  |              |   N  |   M  +------+   >  +------+------|
 //  | Shift|   Z  +------'      `-------------'              `-------------'      `------+   ?  | Shift|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              | Alt  | Ctrl |  LY1 ||  LY1 |  LY2 |Ctl-F2|                            
+//                              |Ctl-F2| Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |                            
 //                              `--------------------'`--------------------'
-                  KC_1,             KC_2,   KC_3,   KC_4,        KC_5,                                   KC_6,        KC_7,       KC_8,   KC_9,   KC_0,            \
-                  KC_Q,             KC_W,   KC_E,   KC_R,        KC_T,         LT(1,KC_SPC),LT(1,KC_SPC),KC_Y,        KC_U,       KC_I,   KC_O,   KC_P,            \
-    GUI_T(KC_ESC),KC_A,             KC_S,   KC_D,   KC_F,        KC_G,                                   KC_H,        KC_J,       KC_K,   KC_L,   KC_SCLN,KC_MINS, \
-    ALT_T(KC_TAB),KC_Z,             KC_X,   KC_C,   KC_V,        KC_B,                                   KC_N,        KC_M,       KC_COMM,KC_DOT, KC_SLSH,KC_QUOT, \
-    KC_LSHIFT,                                      ALT_T(KC_F2),CTL_T(KC_SPC),                          LT(2,KC_SPC),LCTL(KC_F2),                        MT(MOD_RSFT,KC_ENT) \
+                  KC_1,             KC_2,   KC_3,   KC_4,        KC_5,                                    KC_6,        KC_7,       KC_8,   KC_9,   KC_0,            \
+                  KC_Q,             KC_W,   KC_E,   KC_R,        KC_T,         LT(1,KC_CAPS),LT(1,KC_SPC),KC_Y,        KC_U,       KC_I,   KC_O,   KC_P,            \
+    GUI_T(KC_ESC),KC_A,             KC_S,   KC_D,   KC_F,        KC_G,                                    KC_H,        KC_J,       KC_K,   KC_L,   KC_SCLN,KC_MINS, \
+    ALT_T(KC_TAB),KC_Z,             KC_X,   KC_C,   KC_V,        KC_B,                                    KC_N,        KC_M,       KC_COMM,KC_DOT, KC_SLSH,KC_QUOT, \
+    KC_LSHIFT,                                      LCTL(KC_F2),CTL_T(KC_SPC),                           LT(2,KC_SPC),ALT_T(KC_F2),                        MT(MOD_RSFT,KC_ENT) \
 ),
 [1] = KEYMAP( /* All Other keys */
 //                       ,------.                                          ,------.
-//                ,------|  F3  |-------------.              .-------------|      |------.              
-//         ,------+      +------+      |      |              |      |      +------+  F11 +------.       
-//         |      +------+ Entr +------+------|              |------+------+   8  +------+  F12 |       
+//                ,------|  F3  |-------------.              .-------------|  F8  |------.              
+//         ,------+  F2  +------+  F4  |  F5  |              |  F6  |  F7  +------+  F9  +------.       
+//         |  F1  +------+ Entr +------+------|              |------+------+   8  +------+  F10 |       
 //  ,------+------+   0  +------+   1  |   =  |              |   *  |   7  +------+   9  +------+------.
 //  | Esc  |      +------+  Up  +------+------|              |------+------+   5  +------+   +  | Bksp |
-//  |------+------+ Left +------+ Right|   -  |              |   /  |   4  +------+   6  +------+------|
-//  | Tab  | BkSp +------+  Dn  +------+------|              |------+------+   2  +------+   -  |      |
-//  |------+------+  Del +------+  Ins | CtlF2|              |   0  |   1  +------+   3  +------+------|
-//  | Shift|  00  +------'      `-------------'              `-------------'      `------+   =  | Enter|
+//  |------+------+  <-  +------+  ->  |   -  |              |   \  |   4  +------+   6  +------+------|
+//  | Tab  |  Ins +------+  Dn  +------+------|              |------+------+   2  +------+   =  |      |
+//  |------+------+  Del +------+ BkSp | CtlF2|              |   0  |   1  +------+   3  +------+------|
+//  | Shift|  00  +------'      `-------------'              `-------------'      `------+   /  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |  F2  |  Spc |  Spc ||  Spc |  Spc |Ctl-F2|                            
+//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |                            
 //                              `--------------------'`--------------------'
 
-                  XXXXXXX,          XXXXXXX,KC_F3,  XXXXXXX,     XXXXXXX,                                XXXXXXX,     XXXXXXX,    XXXXXXX,KC_F11, KC_F12,          \
-                  XXXXXXX,          KC_0,   KC_ENT, KC_1,        KC_EQL,       _______,     _______,     KC_ASTR,     KC_7,       KC_8,   KC_9,   KC_PLUS,         \
-    _______,      KC_BSPC,          KC_LEFT,KC_UP,  KC_RGHT,     KC_MINS,                                KC_SLSH,     KC_4,       KC_5,   KC_6,   KC_MINS,KC_BSPC, \
-    _______,      DOUBLE_ZERO_MACRO,KC_DEL, KC_DOWN,KC_INS,      LCTL(KC_F2),                            KC_0,        KC_1,       KC_2,   KC_3,   KC_EQL, XXXXXXX, \
-    _______,                                        _______,     _______,                                _______,     _______,                            _______  \
+                  KC_F1,            KC_F2,  KC_F3,  KC_F4,       KC_F5,                                   KC_F6,       KC_F7,      KC_F8,  KC_F9,  KC_F10,          \
+                  XXXXXXX,          KC_0,   KC_ENT, KC_1,        KC_EQL,       _______,      _______,     KC_ASTR,     KC_7,       KC_8,   KC_9,   KC_PLUS,         \
+    _______,      KC_INS,           KC_LEFT,KC_UP,  KC_RGHT,     KC_MINS,                                 KC_BSLS,     KC_4,       KC_5,   KC_6,   KC_EQL, KC_BSPC, \
+    _______,      DOUBLE_ZERO_MACRO,KC_DEL, KC_DOWN,KC_BSPC,     LCTL(KC_F2),                             KC_0,        KC_1,       KC_2,   KC_3,   KC_SLSH,XXXXXXX, \
+    _______,                                        _______,     _______,                                 _______,     _______,                            _______  \
 ),
 [2] = KEYMAP( /* Arrow Keys */
 //                       ,------.                                          ,------.
-//                ,------|  F3  |-------------.              .-------------|  F8  |------.              
-//         ,------+  F2  +------+  F4  |  F5  |              |  F6  |  F7  +------+  F9  +------.       
-//         |  F1  +------+   }  +------+------|              |------+------+      +------+  F10 |       
-//  ,------+------+  {   +------+   |  | PgUp |              |      |  Del +------+ Bksp +------+------.
+//                ,------|  F3  |-------------.              .-------------|      |------.              
+//         ,------+      +------+      |      |              |      |      +------+      +------.       
+//         |      +------+   }  +------+------|              |------+------+      +------+  F12 |       
+//  ,------+------+  {   +------+   |  |      |              |   *  |  Del +------+ Bksp +------+------.
 //  | Esc  |   `  +------+   ]  +------+------|              |------+------+  Up  +------+   +  | Bksp |
 //  |------+------+  [   +------+      |  0   |              |   1  |  <-  +------+  ->  +------+------|
-//  | Tab  |   ~  +------+ PrtSc+------+------|              |------+------+  Dn  +------+   -  | Ins  |
-//  |------+------+      +------+      | PgDn |              |   0  | Home +------+  End +------+------|
+//  | Tab  |   ~  +------+ PrtSc+------+------|              |------+------+  Dn  +------+   =  | Ins  |
+//  |------+------+      +------+      |      |              |   0  | Home +------+  End +------+------|
 //  | Shift|      +------'      `-------------'              `-------------'      `------+   \  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |  F2  |  Spc |  Spc ||  Spc |  Spc |Ctl-F2|                            
+//                              |Ctl-F2|  Spc |  Spc ||  Spc |  Spc |  F2  |                            
 //                              `--------------------'`--------------------'
-                  KC_F1,            KC_F2,  KC_F3,  KC_F4,       KC_F5,                                  KC_F6,       KC_F7,      KC_F8,  KC_F9,  KC_F10,          \
-                  KC_GRV,           KC_LCBR,KC_RCBR,KC_PIPE,     KC_PGUP,      _______,     _______,     XXXXXXX,     KC_DEL,     XXXXXXX,KC_BSPC,KC_PLUS,         \
-    _______,      KC_TILD,          KC_LBRC,KC_RBRC,XXXXXXX,     KC_0,                                   KC_1,        KC_LEFT,    KC_UP  ,KC_RGHT,KC_MINS,KC_BSPC, \
-    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,XXXXXXX,     KC_PGDN,                                KC_0,        KC_HOME,    KC_DOWN,KC_END, KC_BSLS,KC_INS,  \
-    _______,                                        _______,     _______,                                _______,     _______,                            _______  \
+                  XXXXXXX,          XXXXXXX,KC_F3,  XXXXXXX,     XXXXXXX,                                 XXXXXXX,     XXXXXXX,    XXXXXXX,XXXXXXX, KC_F12,          \
+                  KC_GRV,           KC_LCBR,KC_RCBR,KC_PIPE,     XXXXXXX,      _______,      _______,     KC_ASTR,     KC_DEL,     XXXXXXX,KC_BSPC,KC_PLUS,         \
+    _______,      KC_TILD,          KC_LBRC,KC_RBRC,XXXXXXX,     KC_0,                                    KC_1,        KC_LEFT,    KC_UP  ,KC_RGHT,KC_EQL, KC_BSPC, \
+    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,XXXXXXX,     XXXXXXX,                                 KC_0,        KC_HOME,    KC_DOWN,KC_END, KC_BSLS,KC_INS,  \
+    _______,                                        _______,     _______,                                 _______,     _______,                            _______  \
 ),
 };
 
