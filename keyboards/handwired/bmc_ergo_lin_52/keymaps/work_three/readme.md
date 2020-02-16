@@ -1,1 +1,1 @@
-# The work keymap for bmc_ergo_lin_52
+# The work three keymap for bmc_ergo_lin_52

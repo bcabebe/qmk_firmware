@@ -1,1 +1,1 @@
-# The default keymap for bmc_el_52_bt
+# The work three keymap for bmc_el_52_bt
