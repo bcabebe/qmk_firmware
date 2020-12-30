@@ -48,6 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  | Shift|   z  +------'      `-------------'              `-------------'      `------+   /  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
 //                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |                            
+//                              `------|------|------||------|------|------'
+//                              |      | Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |
 //                              `--------------------'`--------------------'
 //
 //                       ,------.                                          ,------.
@@ -61,7 +63,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |------+------+   X  +------+   V  |   B  |              |   N  |   M  +------+   >  +------+------|
 //  | Shift|   Z  +------'      `-------------'              `-------------'      `------+   ?  | Shift|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |Ctl-F2| Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |                            
+//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |
+//                              `------|------|------||------|------|------'
+//                              |      | Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |
 //                              `--------------------'`--------------------'
                   KC_1,             KC_2,   KC_3,   KC_4,        KC_5,                                    KC_6,        KC_7,       KC_8,   KC_9,   KC_0,            \
                   KC_Q,             KC_W,   KC_E,   KC_R,        KC_T,         LT(1,KC_CAPS),LT(1,KC_SPC),KC_Y,        KC_U,       KC_I,   KC_O,   KC_P,            \
@@ -81,7 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |------+------+  Del +------+ BkSp | CtlF2|              |   0  |   1  +------+   3  +------+------|
 //  | Shift|  00  +------'      `-------------'              `-------------'      `------+   /  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |                            
+//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |
+//                              `------|------|------||------|------|------'
+//                              |      | Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |
 //                              `--------------------'`--------------------'
 
                   KC_F1,            KC_F2,  KC_F3,  KC_F4,       KC_F5,                                   KC_F6,       KC_F7,      KC_F8,  KC_F9,  KC_F10,          \
@@ -97,17 +103,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //         |      +------+   }  +------+------|              |------+------+      +------+  F12 |       
 //  ,------+------+  {   +------+   |  |      |              |   *  |  Del +------+ Bksp +------+------.
 //  | Esc  |   `  +------+   ]  +------+------|              |------+------+  Up  +------+   +  | Bksp |
-//  |------+------+  [   +------+      |  0   |              |   1  |  <-  +------+  ->  +------+------|
+//  |------+------+  [   +------+ PgUp |  0   |              |   1  |  <-  +------+  ->  +------+------|
 //  | Tab  |   ~  +------+ PrtSc+------+------|              |------+------+  Dn  +------+   =  | Ins  |
-//  |------+------+      +------+      |      |              |   0  | Home +------+  End +------+------|
+//  |------+------+      +------+ PgDn |      |              |   0  | Home +------+  End +------+------|
 //  | Shift|      +------'      `-------------'              `-------------'      `------+   \  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
-//                              |Ctl-F2|  Spc |  Spc ||  Spc |  Spc |  F2  |                            
+//                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |
+//                              `------|------|------||------|------|------'
+//                              |      | Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |
 //                              `--------------------'`--------------------'
                   XXXXXXX,          XXXXXXX,KC_F3,  XXXXXXX,     XXXXXXX,                                 XXXXXXX,     XXXXXXX,    XXXXXXX,XXXXXXX, KC_F12,          \
                   KC_GRV,           KC_LCBR,KC_RCBR,KC_PIPE,     XXXXXXX,      _______,      _______,     KC_ASTR,     KC_DEL,     XXXXXXX,KC_BSPC,KC_PLUS,         \
-    _______,      KC_TILD,          KC_LBRC,KC_RBRC,XXXXXXX,     KC_0,                                    KC_1,        KC_LEFT,    KC_UP  ,KC_RGHT,KC_EQL, KC_BSPC, \
-    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,XXXXXXX,     XXXXXXX,                                 KC_0,        KC_HOME,    KC_DOWN,KC_END, KC_BSLS,KC_INS,  \
+    _______,      KC_TILD,          KC_LBRC,KC_RBRC,KC_PGUP,     KC_0,                                    KC_1,        KC_LEFT,    KC_UP  ,KC_RGHT,KC_EQL, KC_BSPC, \
+    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,KC_PGDN,     XXXXXXX,                                 KC_0,        KC_HOME,    KC_DOWN,KC_END, KC_BSLS,KC_INS,  \
     _______,                                        _______,     _______,                                 _______,     _______,                            _______  \
 ),
 };
