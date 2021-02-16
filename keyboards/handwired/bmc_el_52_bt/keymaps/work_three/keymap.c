@@ -97,24 +97,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [2] = KEYMAP( /* Arrow Keys */
 //                       ,------.                                          ,------.
-//                ,------|  F3  |-------------.              .-------------|      |------.              
-//         ,------+      +------+      |      |              |      |      +------+      +------.       
-//         |      +------+   }  +------+------|              |------+------+      +------+  F12 |       
+//                ,------|  F3  |-------------.              .-------------| PgUp |------.              
+//         ,------+      +------+      |      |              | PgUp | PgDn +------+      +------.       
+//         |      +------+   }  +------+------|              |------+------+ PgDn +------+  F12 |       
 //  ,------+------+  {   +------+   |  |      |              |   *  |  Del +------+ Bksp +------+------.
 //  | Esc  |   `  +------+   ]  +------+------|              |------+------+  Up  +------+   +  | Bksp |
-//  |------+------+  [   +------+ PgUp |  0   |              |   1  |  <-  +------+  ->  +------+------|
+//  |------+------+  [   +------+      |  0   |              |   1  |  <-  +------+  ->  +------+------|
 //  | Tab  |   ~  +------+ PrtSc+------+------|              |------+------+  Dn  +------+   =  | Ins  |
-//  |------+------+      +------+ PgDn |      |              |   0  | Home +------+  End +------+------|
+//  |------+------+      +------+      |      |              |   0  | Home +------+  End +------+------|
 //  | Shift|      +------'      `-------------'              `-------------'      `------+   \  | Enter|
 //  `-------------'             ,--------------------.,--------------------.             `-------------'
 //                              |Ctl-F2|  Spc | Caps ||  Spc |  Spc |  F2  |
 //                              `------|------|------||------|------|------'
 //                              |      | Ctrl |  LY1 ||  LY1 |  LY2 | Alt  |
 //                              `--------------------'`--------------------'
-                  XXXXXXX,          XXXXXXX,KC_F3,  XXXXXXX,    XXXXXXX,                                 XXXXXXX,     XXXXXXX,     XXXXXXX,XXXXXXX,KC_F12,          \
-    _______,      KC_GRV,           KC_LCBR,KC_RCBR,KC_PIPE,    XXXXXXX,                                 KC_ASTR,     KC_DEL,      XXXXXXX,KC_BSPC,KC_PLUS,KC_BSPC, \
-    _______,      KC_TILD,          KC_LBRC,KC_RBRC,KC_PGUP,    KC_0,                                    KC_1,        KC_LEFT,     KC_UP  ,KC_RGHT,KC_EQL, KC_INS,  \
-    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,KC_PGDN,    XXXXXXX,                                 KC_0,        KC_HOME,     KC_DOWN,KC_END, KC_BSLS,_______, \
+                  XXXXXXX,          XXXXXXX,KC_F3,  XXXXXXX,    XXXXXXX,                                 KC_PGUP,     KC_PGDN,     KC_PGUP,XXXXXXX,KC_F12,          \
+    _______,      KC_GRV,           KC_LCBR,KC_RCBR,KC_PIPE,    XXXXXXX,                                 KC_ASTR,     KC_DEL,      KC_PGDN,KC_BSPC,KC_PLUS,KC_BSPC, \
+    _______,      KC_TILD,          KC_LBRC,KC_RBRC,XXXXXXX,    KC_0,                                    KC_1,        KC_LEFT,     KC_UP  ,KC_RGHT,KC_EQL, KC_INS,  \
+    _______,      XXXXXXX,          XXXXXXX,KC_PSCR,XXXXXXX,    XXXXXXX,                                 KC_0,        KC_HOME,     KC_DOWN,KC_END, KC_BSLS,_______, \
                                                     _______,    _______,      _______,      _______,     _______,     _______                                       \
 ),
 };
